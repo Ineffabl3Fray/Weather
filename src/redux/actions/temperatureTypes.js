@@ -1,0 +1,3 @@
+export const GET_TEMPERATURE = 'GET_TEMPERATURE';
+export const GET_AIRPOLLUTION = 'GET_AIRPOLLUTION';
+export const ERROR = 'ERROR';

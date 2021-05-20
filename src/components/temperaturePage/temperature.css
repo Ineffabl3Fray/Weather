@@ -1,0 +1,203 @@
+* {
+    margin: 0;;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body {
+    background-color: rgb(0, 0, 0);
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-temperature{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.main-temperature-image{
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/sunset-min.jpg);
+    filter: blur(15px);
+}
+.main-temperature-body{
+    position: absolute;
+    padding: 3rem;
+    width: 100%;
+    height: 100%;
+}
+.left-side{
+    width: 65%;
+    height: 30rem;
+    background-image: url(./img/sunset-min.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.left-side-content{
+    margin: 0 0 6% 10%;
+    color: white;
+    justify-content: flex-start;
+    width: 100%;
+}
+.weather-temperature{
+    font-size: 6.5rem;
+    font-weight: bolder;
+}
+.degree-sign{
+    align-self: flex-start;
+    font-size: 5rem;
+}
+.left-side-content :nth-child(3){
+    align-items: flex-start;
+    margin-left: 5%;
+}
+.left-side-content :nth-child(4){
+    align-items: center;
+    margin-left: 5%;
+}
+.city-name{
+    font-size: 3rem;
+}
+.full-date{
+    font-size: 1rem;
+}
+.weather-icon{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.weather-condition{
+    font-size: 1rem;
+}
+
+
+.right-side{
+    width: 35%;
+    height: 30rem;
+    color: white;
+    position: relative;
+    justify-content: start;
+    align-items: flex-start;
+}
+.right-side-image{
+    background-image: url(./img/sunset-min.jpg);
+    height: 30rem;
+    width: 100%;
+    filter: blur(10px);
+}
+.right-side-body{
+    padding: 5% 14% 10% 10%;
+    width: 100%;
+    position: absolute;
+}
+.search-form{
+    justify-content: start;
+}
+.search-form input{
+    background: transparent;
+    color: white;
+    padding: 2%;
+    height: 2.5rem;
+    border: none;
+    border-bottom: .2rem solid wheat;
+    transition: all 0.3s linear;
+}
+.search-form input:focus{
+    outline: none;
+    border-bottom: .2rem solid #ffa500;
+}
+.search-button{
+    width: 5rem;
+    outline: none;
+    border: none;
+    height: 2rem;
+    margin-left: 3%;
+    cursor: pointer;
+    background-color: #f5ddb3;
+    color: #000000;
+    justify-self: flex-end;
+    transition: all 0.3s linear;
+}
+.search-button:hover{
+    background-color: #dc6b00;
+    color: #ffffff;
+}
+.search-form input:focus ~ .search-button{
+    background-color: #dc6b00;
+    color: #ffffff;
+}
+.line{
+    margin: 8% 0;
+    border-bottom: 2px solid #ced6da;
+}
+.weather-details-main{
+}
+.weather-details-name{
+    margin-bottom: 0%;
+    color: #ffffff;
+}
+.weather-details-item{
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 4%;
+    padding: 0% 6% 0% 9%;
+    color: #e0d7d7;
+}
+
+
+@media only screen and (min-width: 250px) and (max-width: 800px){
+    html{
+        font-size: 8px;
+    }
+    .main-temperature-body{
+        flex-direction: column;
+    }
+    .left-side{
+        height: 70%;
+        width: 90%;
+    }
+    .right-side{
+        width: 90%;
+        margin-top: 3%;
+        height: 85%;
+    }
+    .right-side-body{
+        top: 10%;
+    }
+    .right-side-image{
+        width: 100%;
+        height: 100%;
+    }
+    .search-button{
+        background-color: #dc6b00;
+        color: #ffffff;
+        width: 7rem;
+        height: 3rem;
+    }
+    .search-form input{
+        border-bottom: .2rem solid #ffa500;
+    }
+}
+
+@media only screen and (min-width: 530px) and (max-width: 800px){
+    html{
+        font-size: 10px;
+    }
+    .right-side-body{
+        top: 0%;
+    }
+    .right-side{
+        height: 100%;
+    }
+}
